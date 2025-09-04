@@ -1,0 +1,15 @@
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-calculator {
+    display: flex;
+    justify-content: center;
+}
+
+.heading {
+    display: flex;
+    justify-content: center
+}

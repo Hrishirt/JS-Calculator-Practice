@@ -1,6 +1,7 @@
 let addoperator = false
 let minusoperator = false
 let multipyoperator = false; 
+let divideoperator = false;
 
 console.log("JavaScript file loaded!");
 const numberButtons = document.querySelectorAll(".numberButton");
@@ -35,6 +36,7 @@ function clearScreen() {
     addoperator = false
     minusoperator = false
     multipyoperator = false; 
+    divideOperator = false
 }
 
 
@@ -43,6 +45,16 @@ minusButton.addEventListener('click', minusoperation)
 
 const multiplyButton = document.getElementById('multiplyOperator')
 multiplyButton.addEventListener('click', multiplyOperation)
+
+const divideButton = document.getElementById('divideOperator');
+divideButton.addEventListener('click', divideOperation)
+
+function divideOperation() {
+    firstNumber = screen.value;
+    divideoperator = true;
+    let val = divideButton.textContent || divideButton.innerText;
+    screen.value += val
+}
 
 function multiplyOperation() {
     firstNumber = screen.value;
@@ -71,7 +83,7 @@ function equalSign() {
         addChar = '+'
         const addCharIndex = screen.value.indexOf(addChar)
         secondNumber = screen.value.substring(addCharIndex + 1);
-        screen.value = parseInt(firstNumber) + parseInt(secondNumber);
+        screen.value = parseFloat(firstNumber) + parseFloat(secondNumber);
         addoperator = false
     }
 
@@ -79,7 +91,7 @@ function equalSign() {
         minuschar = '-';
         const minusCharIndex = screen.value.indexOf(minuschar)
         secondNumber = screen.value.substring(minusCharIndex + 1);
-        screen.value = parseInt(firstNumber) - parseInt(secondNumber);
+        screen.value = parseFloat(firstNumber) - parseFloat(secondNumber);
         minusoperator = false
     }
 
@@ -88,8 +100,26 @@ function equalSign() {
         multiplyChar = "x";
         const multiplyCharIndex = screen.value.indexOf(multiplyChar);
         secondNumber = screen.value.substring(multiplyCharIndex + 1);
-        screen.value = parseInt(firstNumber) * parseInt(secondNumber);
+        screen.value = parseFloat(firstNumber) * parseFloat(secondNumber);
         multipyoperator = false;
     }
    
+    if (divideoperator == true)
+    {
+        divideChar = "÷";
+        const divideCharIndex = screen.value.indexOf(divideChar);
+        secondNumber = screen.value.substring(divideCharIndex + 1);
+        if (secondNumber == "0")
+        {
+            screen.value = "undefined"
+        }
+        else
+        {
+            screen.value = parseFloat(firstNumber) /  parseFloat(secondNumber);
+        }
+        divideoperator = false
+    }
+
 }
+
+// Test comment for push

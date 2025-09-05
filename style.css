@@ -2,14 +2,103 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+body {
+  background: #23252b;
+  color: #fff;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
 }
 
 .center-calculator {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .heading {
     display: flex;
     justify-content: center
+}
+
+#result {
+    width: 30%;
+    justify-content: center;
+    border-radius: 50px;
+    height: 30px;
+    border: 1.5px solid #444; 
+    box-shadow: 0 1px 8px rgb(0,0,0,0.13)
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    border-radius: 50px;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    gap: 5px;
+    justify-content: center;
+}
+
+.numberButton {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #323641;
+}
+
+#addOperator{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #323641;
+}
+
+#clear{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #323641;
+}
+
+#equals{
+    height: 50px;
+    width: 110px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #323641;
+}
+
+#minusOperator{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #323641;
+}
+
+#multiplyOperator{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #323641;
+}
+
+#divideOperator{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #323641;
 }
